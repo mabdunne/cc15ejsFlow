@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript | Flow | Three</title>
+</head>
+<body>
+	<script>
+		var player1Score = parseFloat(prompt("Player 1 Score:"));
+		while ( isNaN(player1Score) ) { 
+			alert("Please enter a numeric value, that's not a number.");
+			player1Score = parseFloat(prompt("Player 1 Score:"));
+		} 
+		var player2Score = parseFloat(prompt("Player 2 Score:"));
+		while ( isNaN(player2Score) ) { 
+			alert("Please enter a numeric value, that's not a number.");
+			player2Score = parseFloat(prompt("Player 2 Score:"));
+		} 
+		/*
+			Prompt the players for their names.
+			Print out the name of the player with the higher score,
+			or "Tie" if there is a tie.
+		*/
+		/* Prompt the players for their names. */
+		var player1Name = prompt("Player 1 Name:");
+		var player2Name = prompt("Player 2 Name:");
+		/* Print out the name of the player with the higher score,
+			or "Tie" if there is a tie. */
+		if ( player1Score > player2Score ) { 
+			console.log("The winner is " + player1Name );
+		} 
+		else if ( player2Score > player1Score ) { 
+			console.log("The winner is " + player2Name );
+		} 
+		else if ( player2Score === player1Score ) { 
+			console.log("Tie!");
+		} 
+		else { 
+			console.log("Should not end up here!");
+		} 
+
+	</script>
+</body>
+</html>
